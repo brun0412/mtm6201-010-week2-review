@@ -15,10 +15,147 @@ body {
   line-height: 1.4;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 
+h1, h2, h3 {
+  font-family: "anton", sans-serif;
+}
 
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1em;
+}
 
+#logo {
+  width: 160px;
+}
 
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+nav ul {
+  list-style: none;
+  display: flex;
+}
 
+nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background-color: #f54f95;
+  padding: .75em 1.25em;
+  border: 1px solid #f54f95;
+  margin-left: 1em;
+}
 
+nav a:hover, nav a:focus {
+  background-color: #fff;
+  color: #f54f95;
+}
+
+#hero {
+  height: 60vh;
+  background-color: #f54f95;
+  background-image: url(../images/hero-donuts.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero h1 {
+  color: #fff;
+}
+
+section {
+  padding: 4em 0;
+}
+
+section h2 {
+  color: #f54f95;
+}
+
+.productcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+.productcard {
+  background-color: #c7628a;
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 1.25em;
+}
+
+.productcard:nth-child(2) {
+  background-color: #c78e62;
+}
+
+.productcard:nth-child(3) {
+  background-color: #ec8b3d;
+}
+
+.productcard:nth-child(4) {
+  background-color: #44ce94;
+}
+
+.productcard p {
+  margin: .5em 0;
+}
+
+.productcard p.price {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.productcard button {
+  display: inline-block;
+  background-color: #fff;
+  color: #f54f95;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 20px;
+  padding: .5em 1.5em;
+  cursor: pointer;
+  margin-top: auto;
+  font-family: "anton", sans-serif;
+}
+
+.productcard button:hover, 
+.productcard button:focus {
+  background-color: #f54f95;
+  color: #fff;
+}
+
+footer {
+  background-color: #f54f95;
+  text-align: center;
+  padding: .5em 0;
+  color: #fff;
+}
+
+@media (min-width: 38em) {
+  .productcontainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 68em) {
+  .productcontainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
